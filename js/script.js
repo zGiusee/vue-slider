@@ -53,7 +53,6 @@ createApp({
             else{
                 this.currentImage++;
             }
-            console.log(this.currentImage)
         },
         prevImg(){
 
@@ -63,10 +62,24 @@ createApp({
             else{
                 this.currentImage--;
             }
-            console.log(this.currentImage)
         },
-        startAutoPlay(){
+        // DEFINICO LE FUNZIONI DI AUTO PLAY CHE AVRA LO SLIDER
 
+        // FUNZIONE CHE CAMBIA L'IMMAGINE OGNI 3 SECONDI
+        startAutoPlay(){
+            this.autoPlay = setInterval(() => {
+                this.nextImg();
+            }, 1000);
+        },
+        // FUNZIONE CHE FERMA L'AUTO PLAY
+        pauseAutoPlay(){
+            clearInterval(this.autoPlay);
+            this.autoPlay = null;
+        },
+        // FUNZIONE CHE FERMA L'AUTO PLAY E LO FA RIPARTIRE DA 0
+        stopAutoPlay(){
+            this.pauseAutoPlay();
+            this.currentImage = 0;
         }
         
     },

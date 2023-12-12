@@ -17,7 +17,7 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
+                <div class="item" @mouseover="pauseAutoPlay" @mouseleave="startAutoPlay">
                     <img :src="'./' + slides[currentImage].image" alt="Spiderman" />
                     <div class="text">
                         <h3 v-text="slides[currentImage].title"></h3>
@@ -46,9 +46,9 @@
                 </div>
 
                 <div class="buttons-container">
-                    <button type="button" class="my-btn bg-green"><i class="fa-solid fa-play"></i></button>
-                    <button type="button" class="my-btn bg-yellow"><i class="fa-solid fa-pause"></i></button>
-                    <button type="button" class="my-btn bg-red"><i class="fa-solid fa-stop"></i></button>
+                    <button type="button" class="my-btn bg-green" @click="startAutoPlay"><i class="fa-solid fa-play"></i></button>
+                    <button type="button" class="my-btn bg-yellow" @click="pauseAutoPlay"><i class="fa-solid fa-pause"></i></button>
+                    <button type="button" class="my-btn bg-red" @click="stopAutoPlay"><i class="fa-solid fa-stop"></i></button>
                 </div>
 
             </div>
