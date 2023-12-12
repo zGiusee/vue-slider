@@ -63,9 +63,12 @@ createApp({
                 this.currentImage--;
             }
         },
+
+        // DEFINISCO LA FUNZIONE CHE AL CLICK SULLA THUMBNAIL MODIFICHI IL VALORE 'currentImage' E QUINDI CAMBI L'IMMAGINE ATTIVA SULLA PAGINA
         changeImg(index){
             this.currentImage = index;
         },
+
         // DEFINICO LE FUNZIONI DI AUTO PLAY CHE AVRA LO SLIDER
 
         // FUNZIONE CHE CAMBIA L'IMMAGINE OGNI 3 SECONDI

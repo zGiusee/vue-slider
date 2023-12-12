@@ -19,6 +19,7 @@
 
                 <div class="item">
 
+                    <!-- MAIN IMAGE PART -->
                     <img 
                     :src="'./' + slides[currentImage].image" 
                     alt="slides[currentImage].title" 
@@ -26,6 +27,7 @@
                     @mouseover="pauseAutoPlay" @mouseleave="startAutoPlay"
                     />
 
+                    <!-- MAIN IMAGE TITLE AND TEXT -->
                     <div class="text">
                         <h3 v-text="slides[currentImage].title"></h3>
                         <p v-text="slides[currentImage].text" ></p>
@@ -33,9 +35,11 @@
                 </div>
 
                 <div class="thumbs">
+                    <!-- IMG SLIDER BUTTONS -->
                     <div class="prev" @click="prevImg"></div>
                     <div class="next" @click="nextImg" ></div>
 
+                    <!-- IMAGE THUMB FOR CYCLE AND CUSTOMIZATION -->
                     <div class="thumb" v-for="(slide, index) in slides" :class="currentImage === index ? 'active' : ' '">
                         <img 
                         class="" 
@@ -47,6 +51,7 @@
 
                 </div>
 
+                <!-- BUTTONS FOR THE AUTOPLAY FUNCTION -->
                 <div class="buttons-container">
                     <button type="button" class="my-btn bg-green" @click="startAutoPlay"><i class="fa-solid fa-play"></i></button>
                     <button type="button" class="my-btn bg-yellow" @click="pauseAutoPlay"><i class="fa-solid fa-pause"></i></button>
