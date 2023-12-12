@@ -4,6 +4,9 @@ createApp({
     data(){
         return {
 
+            // DICHIARO LA VARIABILE DELL'AUTO PLAY CON VALORE NULLO
+            autoPlay: null,
+
             // DICHIARO LA VARIABILE DELLA POSIZIONE DELLE IMMAGINI
             currentImage: 0,
 
@@ -61,6 +64,9 @@ createApp({
                 this.currentImage--;
             }
             console.log(this.currentImage)
+        },
+        startAutoPlay(){
+
         }
         
     },

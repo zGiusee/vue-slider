@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Slider</title>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -17,7 +18,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="'./' + slides[currentImage].image" :key="index" alt="Spiderman" />
+                    <img :src="'./' + slides[currentImage].image" alt="Spiderman" />
                     <div class="text">
                         <h3 v-text="slides[currentImage].title"></h3>
                         <p v-text="slides[currentImage].text" ></p>
@@ -42,6 +43,12 @@
                     <div class="thumb">
                         <img src="img/05.webp" alt="Avengers" />
                     </div>
+                </div>
+
+                <div class="buttons-container">
+                    <button type="button" class="my-btn bg-green"><i class="fa-solid fa-play"></i></button>
+                    <button type="button" class="my-btn bg-yellow"><i class="fa-solid fa-pause"></i></button>
+                    <button type="button" class="my-btn bg-red"><i class="fa-solid fa-stop"></i></button>
                 </div>
 
             </div>

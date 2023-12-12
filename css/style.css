@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgba(20,20,20);
+}
 .container {
     height: 100vh;
     display: flex;
@@ -71,6 +74,34 @@
 .next {
     bottom: 0;
 }
+
+/* PLAYER BUTTONS */
+
+.buttons-container{
+    display: flex;
+    width: 100%;
+}
+
+.my-btn{
+    margin: 20px 10px;
+    padding: 11px 14px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-green{
+    background-color: green;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
 
 /*
 EXTRA: in questo esempio gli accordion vengono creati
