@@ -63,6 +63,9 @@ createApp({
                 this.currentImage--;
             }
         },
+        changeImg(index){
+            this.currentImage = index;
+        },
         // DEFINICO LE FUNZIONI DI AUTO PLAY CHE AVRA LO SLIDER
 
         // FUNZIONE CHE CAMBIA L'IMMAGINE OGNI 3 SECONDI

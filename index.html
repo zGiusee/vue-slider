@@ -17,8 +17,15 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item" @mouseover="pauseAutoPlay" @mouseleave="startAutoPlay">
-                    <img :src="'./' + slides[currentImage].image" alt="Spiderman" />
+                <div class="item">
+
+                    <img 
+                    :src="'./' + slides[currentImage].image" 
+                    alt="slides[currentImage].title" 
+                    :key="index" 
+                    @mouseover="pauseAutoPlay" @mouseleave="startAutoPlay"
+                    />
+
                     <div class="text">
                         <h3 v-text="slides[currentImage].title"></h3>
                         <p v-text="slides[currentImage].text" ></p>
@@ -28,21 +35,16 @@
                 <div class="thumbs">
                     <div class="prev" @click="prevImg"></div>
                     <div class="next" @click="nextImg" ></div>
-                    <div class="thumb active">
-                        <img src="img/01.webp" alt="Svezia" />
+
+                    <div class="thumb" v-for="(slide, index) in slides" :class="currentImage === index ? 'active' : ' '">
+                        <img 
+                        class="" 
+                        :src="'./' + slide.image" 
+                        :key="index" alt="slide.title" 
+                        @click="changeImg(index)" 
+                        />
                     </div>
-                    <div class="thumb">
-                        <img src="img/02.webp" alt="Ratchet & Clank" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/03.webp" alt="Fortnite" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/04.webp" alt="Stray" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/05.webp" alt="Avengers" />
-                    </div>
+
                 </div>
 
                 <div class="buttons-container">
