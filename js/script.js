@@ -7,6 +7,8 @@ createApp({
             // DICHIARO LA VARIABILE DELL'AUTO PLAY CON VALORE NULLO
             autoPlay: null,
 
+            isAutoPlayActive: false,
+
             // DICHIARO LA VARIABILE DELLA POSIZIONE DELLE IMMAGINI
             currentImage: 0,
 
@@ -73,17 +75,20 @@ createApp({
 
         // FUNZIONE CHE CAMBIA L'IMMAGINE OGNI 3 SECONDI
         startAutoPlay(){
+            this.isAutoPlayActive = true; 
             this.autoPlay = setInterval(() => {
                 this.nextImg();
-            }, 1000);
+            }, 3000);
         },
         // FUNZIONE CHE FERMA L'AUTO PLAY
         pauseAutoPlay(){
+            this.isAutoPlayActive = false; 
             clearInterval(this.autoPlay);
             this.autoPlay = null;
         },
         // FUNZIONE CHE FERMA L'AUTO PLAY E LO FA RIPARTIRE DA 0
         stopAutoPlay(){
+            this.isAutoPlayActive = false; 
             this.pauseAutoPlay();
             this.currentImage = 0;
         }

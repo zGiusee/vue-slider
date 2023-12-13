@@ -53,7 +53,7 @@
 
                 <!-- BUTTONS FOR THE AUTOPLAY FUNCTION -->
                 <div class="buttons-container">
-                    <button type="button" class="my-btn bg-green" @click="startAutoPlay"><i class="fa-solid fa-play"></i></button>
+                    <button type="button" class="my-btn bg-green" @click="startAutoPlay" :disabled="isAutoPlayActive"><i class="fa-solid fa-play"></i></button>
                     <button type="button" class="my-btn bg-yellow" @click="pauseAutoPlay"><i class="fa-solid fa-pause"></i></button>
                     <button type="button" class="my-btn bg-red" @click="stopAutoPlay"><i class="fa-solid fa-stop"></i></button>
                 </div>
